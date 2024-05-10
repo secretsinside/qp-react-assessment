@@ -10,6 +10,10 @@ const TodoSlice: Slice = createSlice({
         items
     },
     reducers: {
+        batchUpdate:(state, action: PayloadAction<TodoItem[]>) => {
+            state.items = action.payload;
+            return state;
+        },
         addTodo: (state, action: PayloadAction<TodoItem>) => {
             let id: Set<number> = new Set();
             state.items.forEach((item: TodoItem) => id.add(item.id));
@@ -43,5 +47,5 @@ const TodoSlice: Slice = createSlice({
 });
 
 
-export const {addTodo, markDone, markUndone} = TodoSlice.actions;
+export const {addTodo, markDone, markUndone, batchUpdate} = TodoSlice.actions;
 export default TodoSlice.reducer;
