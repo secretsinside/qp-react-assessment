@@ -29,7 +29,7 @@ const DemoModeFC: FC = () => {
 
     return (
         <>
-            <div className="mx-2">
+            <div className="m-2">
                 
             <button className="px-4 py-2 rounded-lg font-semibold text-white bg-black" onClick={generateRandomTask}>
                 Demo mode
