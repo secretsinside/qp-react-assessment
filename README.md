@@ -5,7 +5,7 @@ A simple TODO app for your task-list.
 #### Improvements
 - ~~MVP~~
 - ~~Infinite scroll~~
-- Test cases
+- ~~Test cases~~
 - addTodo/markDone/markUnDone operations can be made of O(1)
 - improve CSS
 - Error handling in form and code

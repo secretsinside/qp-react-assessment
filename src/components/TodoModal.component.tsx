@@ -37,12 +37,14 @@ const TodoModalFC: FC<TodoModalProps> = ({toggleTodoModal}) => {
     }
 
     return (
-        <div className="absolute w-full h-screen top-0 left-0 bg-gray-500 bg-opacity-50 flex">
+        <div className="absolute w-full h-screen top-0 left-0 bg-gray-500 bg-opacity-50 flex"
+            data-testid="add-todo-modal">
             <div className="w-3/12" onClick={toggleTodoModal}>
             </div>
             <div className="w-6/12 mx-2 my-auto border-x border-y flex-column p-4 bg-white rounded-lg">
                 <div className="my-5">
                     <input 
+                        data-testid="add-todo-modal-title"
                         className="outline-none border-x border-y text-3xl w-full rounded-lg p-3" 
                         type="text" 
                         placeholder="Title" 
@@ -51,17 +53,22 @@ const TodoModalFC: FC<TodoModalProps> = ({toggleTodoModal}) => {
                 </div>
                 <div className="my-3">
                     <textarea 
+                        data-testid="add-todo-modal-description"
                         className="outline-none border-x border-y rounded-lg resize-none w-full p-3 h-44" 
                         placeholder="Description"
                         value={todoItem.description}
                         onChange={(e) => setTodoItem({...todoItem, description: e.target.value})}/>
                 </div>
-                <div className="text-red-500 px-4 text-sm">
+                <div className="text-red-500 px-4 text-sm" data-testid="add-todo-modal-error-msg">
                     { showError ? "Title and descriptions are required fields" : ""}
                 </div>
                 <div className="text-right">
-                    <button className="py-2 px-8 mx-2 rounded-lg outline-none font-semibold text-red-500" onClick={toggleTodoModal}>Cancel</button>
-                    <button className="bg-black text-white py-2 px-8 rounded-lg font-semibold" onClick={addTodoList}>Add</button>
+                    <button 
+                        data-testid="add-todo-modal-cancel-btn"
+                        className="py-2 px-8 mx-2 rounded-lg outline-none font-semibold text-red-500" onClick={toggleTodoModal}>Cancel</button>
+                    <button 
+                        data-testid="add-todo-modal-add-btn"
+                        className="bg-black text-white py-2 px-8 rounded-lg font-semibold" onClick={addTodoList}>Add</button>
                 </div>
             </div>
             <div className="w-3/12" onClick={toggleTodoModal}>
