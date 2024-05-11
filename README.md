@@ -17,3 +17,5 @@ A simple TODO app for your task-list.
 - Media Queries
 - Click todoitem to see details
 - Color consistency (check box, header)
+
+![alt text](/assets/DemoScreenshot.png)

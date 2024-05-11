@@ -13,7 +13,7 @@ const TodoFC: FC<TodoFCProps> = ({openAddTodoDialog}) => {
 
     return (
         <>
-            <div className="text-2xl bg-blue-300 text-center font-bold h-24 sticky top-0 flex justify-between">
+            <div className="text-2xl bg-blue-200 text-center font-bold h-24 sticky top-0 flex justify-between">
                 <p 
                     className="mx-2 my-auto text-3xl text-blue-950"
                     data-testid="app-title">
