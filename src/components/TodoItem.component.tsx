@@ -18,7 +18,7 @@ const TodoItemFC: FC<TodoItemProps> = ({item}) => {
 
     return (
         <>
-            <div className="flex m-2 border-x border-y rounded-md p-1 text-blue-950">
+            <div className={"flex m-2 border-x border-y rounded-md p-1 text-blue-950 " + (item.completed ? " bg-blue-200 border-blue-950 " : "")}>
                 <input type="checkbox" checked={item.completed} onChange={toggleItemState}/>
                 <div className="ml-2">
                     <p className={`text-lg font-medium ` + (item.completed ? "line-through" : "")}>{item.title}</p>
