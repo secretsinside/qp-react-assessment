@@ -13,9 +13,9 @@ const TodoFC: FC<TodoFCProps> = ({openAddTodoDialog}) => {
 
     return (
         <>
-            <div className="text-2xl bg-red-200 text-center font-bold h-24 sticky top-0 flex justify-between">
+            <div className="text-2xl bg-blue-300 text-center font-bold h-24 sticky top-0 flex justify-between">
                 <p 
-                    className="mx-2 my-auto text-3xl"
+                    className="mx-2 my-auto text-3xl text-blue-950"
                     data-testid="app-title">
                         My Todo
                 </p>
@@ -24,7 +24,7 @@ const TodoFC: FC<TodoFCProps> = ({openAddTodoDialog}) => {
             <div className="text-center mt-4">
                 <button 
                     data-testid="add-todo-btn"
-                    className="bg-black text-white px-4 py-2 rounded-lg font-bold" 
+                    className="bg-blue-950 text-white px-4 py-2 rounded-lg font-bold" 
                     onClick={openAddTodoDialog}>Add</button>
             </div>
                 
@@ -39,7 +39,7 @@ const TodoFC: FC<TodoFCProps> = ({openAddTodoDialog}) => {
                 )
                 :
                 (
-                    <div className="text-center" data-testid="no-todo-banner">
+                    <div className="text-center text-blue-950" data-testid="no-todo-banner">
                         <p className="font-bold text-4xl">Nothing here at moment</p>
                         <p className="text-xl">Go ahead, write something you wanna do later.</p>
                     </div>

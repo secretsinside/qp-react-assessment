@@ -31,10 +31,10 @@ const DemoModeFC: FC = () => {
         <>
             <div className="m-2">
                 
-            <button className="px-4 py-2 rounded-lg font-semibold text-white bg-black" onClick={generateRandomTask}>
+            <button className="px-4 py-2 rounded-lg font-semibold text-white bg-blue-950" onClick={generateRandomTask}>
                 Demo mode
             </button>
-            <p className="text-sm w-40">Click here to generate 1000 todo</p>
+            <p className="text-sm w-40 text-blue-950">Click here to generate 1000 todo</p>
             </div>
         </>
     )

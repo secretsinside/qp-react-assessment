@@ -2,6 +2,11 @@
 A simple TODO app for your task-list.
 
 
+#### Running app locally
+1. `npm install` or `npm i`
+2. `npm start`
+3. `npm run test` for testing (and generating coverage report)  
+
 #### Improvements
 - ~~MVP~~
 - ~~Infinite scroll~~

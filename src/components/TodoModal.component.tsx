@@ -45,7 +45,7 @@ const TodoModalFC: FC<TodoModalProps> = ({toggleTodoModal}) => {
                 <div className="my-5">
                     <input 
                         data-testid="add-todo-modal-title"
-                        className="outline-none border-x border-y text-3xl w-full rounded-lg p-3" 
+                        className="outline-none border-x border-y text-3xl w-full rounded-lg p-3 text-blue-950 font-semibold" 
                         type="text" 
                         placeholder="Title" 
                         value={todoItem.title}
@@ -54,7 +54,7 @@ const TodoModalFC: FC<TodoModalProps> = ({toggleTodoModal}) => {
                 <div className="my-3">
                     <textarea 
                         data-testid="add-todo-modal-description"
-                        className="outline-none border-x border-y rounded-lg resize-none w-full p-3 h-44" 
+                        className="outline-none border-x border-y rounded-lg resize-none w-full p-3 h-44 text-blue-950" 
                         placeholder="Description"
                         value={todoItem.description}
                         onChange={(e) => setTodoItem({...todoItem, description: e.target.value})}/>
@@ -68,7 +68,7 @@ const TodoModalFC: FC<TodoModalProps> = ({toggleTodoModal}) => {
                         className="py-2 px-8 mx-2 rounded-lg outline-none font-semibold text-red-500" onClick={toggleTodoModal}>Cancel</button>
                     <button 
                         data-testid="add-todo-modal-add-btn"
-                        className="bg-black text-white py-2 px-8 rounded-lg font-semibold" onClick={addTodoList}>Add</button>
+                        className="bg-blue-950 text-white py-2 px-8 rounded-lg font-semibold" onClick={addTodoList}>Add</button>
                 </div>
             </div>
             <div className="w-3/12" onClick={toggleTodoModal}>
