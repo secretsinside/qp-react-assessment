@@ -45,7 +45,7 @@ const TodoModalFC: FC<TodoModalProps> = ({toggleTodoModal}) => {
                 <div className="my-5">
                     <input 
                         data-testid="add-todo-modal-title"
-                        className="outline-none border-x border-y text-3xl w-full rounded-lg p-3 text-blue-950 font-semibold" 
+                        className={"outline-none border-x border-y text-3xl w-full rounded-lg p-3 text-blue-950 font-semibold" + ( showError && !todoItem.title ? " border-red-600 " : "" )} 
                         type="text" 
                         placeholder="Title" 
                         value={todoItem.title}
@@ -54,12 +54,12 @@ const TodoModalFC: FC<TodoModalProps> = ({toggleTodoModal}) => {
                 <div className="my-3">
                     <textarea 
                         data-testid="add-todo-modal-description"
-                        className="outline-none border-x border-y rounded-lg resize-none w-full p-3 h-44 text-blue-950" 
+                        className={"outline-none border-x border-y rounded-lg resize-none w-full p-3 h-44 text-blue-950" + ( showError && !todoItem.description ? " border-red-600 " : "" ) }
                         placeholder="Description"
                         value={todoItem.description}
                         onChange={(e) => setTodoItem({...todoItem, description: e.target.value})}/>
                 </div>
-                <div className="text-red-500 px-4 text-sm" data-testid="add-todo-modal-error-msg">
+                <div className="text-red-500 px-2 text-sm" data-testid="add-todo-modal-error-msg">
                     { showError ? "Title and descriptions are required fields" : ""}
                 </div>
                 <div className="text-right">

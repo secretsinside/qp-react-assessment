@@ -24,8 +24,8 @@ const TodoFC: FC<TodoFCProps> = ({openAddTodoDialog}) => {
             <div className="text-center mt-4">
                 <button 
                     data-testid="add-todo-btn"
-                    className="bg-blue-950 text-white px-4 py-2 rounded-lg font-bold" 
-                    onClick={openAddTodoDialog}>Add</button>
+                    className="bg-blue-950 text-white px-4 py-2 my-4 rounded-lg font-bold" 
+                    onClick={openAddTodoDialog}>+ New Todo</button>
             </div>
                 
 
