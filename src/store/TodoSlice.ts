@@ -20,7 +20,7 @@ const TodoSlice: Slice = createSlice({
             let newId: number = parseInt((Math.random()*MAX_TODO_ALLOWED).toString());
             while(id.has(newId)) newId = Math.random()*MAX_TODO_ALLOWED;
             action.payload.id = newId;
-            state.items.push(action.payload);
+            state.items.unshift(action.payload);
             return state;
         },
         markDone: (state, action: PayloadAction<TodoItem>) => {
